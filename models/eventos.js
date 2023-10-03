@@ -17,14 +17,6 @@ const EventoSchema = mongoose.Schema({
             type: Date,
             required: true
         },
-        lat: {
-            type: Number,
-            required: true
-        },
-        lng: {
-            type: Number,
-            required: true
-        },
         description: {
             type: String,
             required: true
@@ -34,10 +26,6 @@ const EventoSchema = mongoose.Schema({
             required: false
         },
         telephone: {
-            type: Number,
-            required: false
-        },
-        price: {
             type: Number,
             required: false
         },
