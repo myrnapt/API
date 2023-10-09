@@ -52,8 +52,11 @@ const EventoSchema = mongoose.Schema({
         creationDate: {
             type: Date,
             default: Date.now()
+        },
+        isPublished: {
+            type: Boolean,
+            required: true
         }
-
 })
 
 module.exports = mongoose.model('Evento', EventoSchema)
