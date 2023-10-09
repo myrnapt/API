@@ -30,7 +30,7 @@ exports.obtenerEventos = async (request, response) => {
 exports.actualizarEvento = async (request, response) => {
 
     try {
-        const {email, name, dataStart, dataEnd, description } = request.body;
+        const {email, name, dataStart, dataEnd, description, direccion, region, provincia, busqueda } = request.body;
         let evento = await Evento.findById(request.params.id);
 
         if (!evento) {
@@ -41,7 +41,11 @@ exports.actualizarEvento = async (request, response) => {
         evento.name = name;
         evento.dataStart = dataStart;
         evento.dataEnd = dataEnd;
+        evento.busqueda = busqueda;
         evento.description = description;
+        evento.direccion = direccion;
+        evento.region = region;
+        evento.provincia = provincia;
 
         evento = await Evento.findOneAndUpdate({_id: request.params.id}, evento, {new: true});
         response.json()

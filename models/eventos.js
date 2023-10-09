@@ -16,6 +16,22 @@ const EventoSchema = mongoose.Schema({
         dataEnd: {
             type: Date,
             required: true
+        }, 
+        busqueda: {
+            type: String,
+            required: true
+        },
+        direccion: {
+            type: String,
+            required: true
+        },
+        region: {
+            type: String,
+            required: true
+        },
+        provincia: {
+            type: String,
+            required: true
         },
         description: {
             type: String,
