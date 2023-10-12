@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const storage = require('../storage')
 const eventoController = require('../controllers/eventosController')
 
 // API EVENTOS

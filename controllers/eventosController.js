@@ -31,7 +31,6 @@ exports.actualizarEvento = async (request, response) => {
 
     try {
         const {email, name, dataStart, dataEnd, description, direccion, region, provincia, busqueda, isPublished } = request.body;
-        const imagePath = 'http://localhost:5038/images' + req.file.filename
         let evento = await Evento.findById(request.params.id);
 
         if (!evento) {
